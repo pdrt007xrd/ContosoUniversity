@@ -1,14 +1,17 @@
-﻿namespace ContosoUniversity.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ContosoUniversity.Models
 {
 
        public enum Grade
         {
-            A,B,C,D,f
+            A,B,C,D,F
 
         }
 
     public class Enrollment
     {
+        [Key]
         public int EnnrollmentID { get; set; }
         public int CourseID { get; set; }
         public int StudentID { get; set; }
